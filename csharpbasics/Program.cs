@@ -46,6 +46,7 @@ var instance3 = new PublicClass();  // public class in other projects are access
 
 
 var status = ApplicationStatus.Running;   // instead of using number 2 we use enums to make code readable
+System.Console.WriteLine(status);
 
 var user = new User("Dhruvi", "Kamani", Gender.Female);   // record is same as class but all values must be provided on initialization
 
@@ -65,3 +66,11 @@ var index = days.IndexOf("Wednesday");    // this way we can get the index of pa
 
 days.RemoveAt(index);  // this way we can remove a day using index
 
+
+void logger(string message)
+{
+    Console.WriteLine(message);
+}
+
+var delegateSample = new DelegateSample(logger); // Passing logger function to delegate
+delegateSample.LogSomething();
